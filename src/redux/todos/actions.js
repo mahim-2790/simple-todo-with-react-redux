@@ -4,6 +4,7 @@ import {
   CLEAR_COMPLETED,
   COLOR_SELECTED,
   DELETED,
+  LOADED,
   TOGGLED,
 } from "./actionTypes";
 
@@ -12,6 +13,15 @@ export const added = (todoText) => {
     type: ADDED,
     payload: {
       todoText,
+    },
+  };
+};
+
+export const loaded = (todoS) => {
+  return {
+    type: LOADED,
+    payload: {
+      todoS,
     },
   };
 };
