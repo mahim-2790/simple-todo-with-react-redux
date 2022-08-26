@@ -44,17 +44,6 @@
       "text": "Test",
       "completed": false,
       "id": 8
-    },
-    {
-      "text": "hdjhdjhdjsdh",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "text": "flutter",
-      "completed": false,
-      "id": 10,
-      "color": "yellow"
     }
   ]
 }
