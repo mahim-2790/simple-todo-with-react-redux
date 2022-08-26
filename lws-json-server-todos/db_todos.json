@@ -53,7 +53,8 @@
     {
       "text": "flutter",
       "completed": false,
-      "id": 10
+      "id": 10,
+      "color": "yellow"
     }
   ]
 }
