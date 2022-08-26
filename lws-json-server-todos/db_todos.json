@@ -9,31 +9,32 @@
     {
       "id": 2,
       "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
+      "completed": false,
       "color": "red"
     },
     {
       "id": 3,
       "text": "Learn React JS",
-      "completed": true,
-      "color": "yellow"
+      "completed": false,
+      "color": "red"
     },
     {
-      "text": "Learn Redux Basics",
+      "text": "Learn Redux advanced",
       "completed": true,
       "id": 4,
       "color": "red"
     },
     {
-      "text": "Learn Redux fundamentals",
+      "text": "Learn Redux basics",
       "completed": false,
       "id": 5,
       "color": "red"
     },
     {
-      "text": "learn Redux",
+      "text": "learn Redux fundamentals",
       "completed": false,
-      "id": 6
+      "id": 6,
+      "color": "yellow"
     },
     {
       "text": "Learn Redux Toolkit",
@@ -41,9 +42,10 @@
       "id": 7
     },
     {
-      "text": "Test",
+      "text": "Learn Flutter Intermediate",
       "completed": false,
-      "id": 8
+      "id": 8,
+      "color": "red"
     }
   ]
 }

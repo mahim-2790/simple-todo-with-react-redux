@@ -1,5 +1,5 @@
 const initialState = {
-  status: "All",
+  status: "Incomplete",
   colors: [],
 };
 

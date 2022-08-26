@@ -4,6 +4,7 @@ import {
   CLEAR_COMPLETED,
   COLOR_SELECTED,
   DELETED,
+  EDITED,
   LOADED,
   TOGGLED,
 } from "./actionTypes";
@@ -59,8 +60,21 @@ const reducer = (state = initialState, action) => {
         };
       });
     case CLEAR_COMPLETED:
-      // console.log("got to reducer");
       return state.filter((todo) => !todo.completed);
+    case EDITED:
+      return state.map((todo) => {
+        if (todo.id === action.payload.todoId) {
+          if (todo.text !== action.payload.editedText) {
+            return {
+              ...todo,
+              text: action.payload.editedText,
+            };
+          } else {
+            return todo;
+          }
+        }
+        return todo;
+      });
     default:
       return state;
   }

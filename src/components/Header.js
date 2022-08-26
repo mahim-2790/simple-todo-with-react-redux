@@ -21,12 +21,10 @@ const Header = () => {
   };
 
   const completeHandler = () => {
-    console.log("got complete");
     dispatch(allCompleted());
   };
 
   const clearHandler = () => {
-    console.log("got cleared");
     dispatch(clearCompleted());
   };
 

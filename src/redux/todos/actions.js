@@ -4,6 +4,7 @@ import {
   CLEAR_COMPLETED,
   COLOR_SELECTED,
   DELETED,
+  EDITED,
   LOADED,
   TOGGLED,
 } from "./actionTypes";
@@ -63,5 +64,15 @@ export const allCompleted = () => {
 export const clearCompleted = () => {
   return {
     type: CLEAR_COMPLETED,
+  };
+};
+
+export const edited = (todoId, editedText) => {
+  return {
+    type: EDITED,
+    payload: {
+      todoId,
+      editedText,
+    },
   };
 };

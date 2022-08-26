@@ -20,7 +20,6 @@ const Footer = () => {
   const dispatch = useDispatch();
 
   const { colors, status } = filters;
-  // console.log({ colors }, filters);
   const todosRemaining = todos.filter((todo) => !todo.completed).length;
 
   const handleStatusChanged = (status) => {
@@ -28,7 +27,6 @@ const Footer = () => {
   };
 
   const handleColorChange = (color) => {
-    // console.log("clicked");
     if (colors?.includes(color)) {
       dispatch(colorChanged(color, "removed"));
     } else {

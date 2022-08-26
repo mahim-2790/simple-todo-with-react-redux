@@ -1,14 +1,13 @@
-import { added } from "../actions";
+import { edited } from "../actions";
 
-const addTodo = (todoText) => {
+const updateTodoText = (todoId, editedText) => {
   return async (dispatch, getState) => {
     const response = await fetch(
-      "https://fake-server-for-lws.herokuapp.com/todos",
+      `https://fake-server-for-lws.herokuapp.com/todos/${todoId}`,
       {
-        method: "POST",
+        method: "PATCH",
         body: JSON.stringify({
-          text: todoText,
-          completed: false,
+          text: editedText,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -17,8 +16,8 @@ const addTodo = (todoText) => {
     );
     const todo = await response.json();
 
-    dispatch(added(todo.text));
+    dispatch(edited(todo.id, todo.text));
   };
 };
 
-export default addTodo;
+export default updateTodoText;
